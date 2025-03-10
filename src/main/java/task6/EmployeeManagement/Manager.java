@@ -2,18 +2,24 @@ package task6.EmployeeManagement;
 
 
 public class Manager extends Employee {
-    int teamSize;
+    private int teamSize;
 
-    // Use of super keyword to refer to the immediate parent class
-    Manager(int id, String name, String department, int salary, int teamSize) {
-        super(id, name, department, salary);
+    public Manager(int id, String name, double salary, String department, int teamSize) {
+        super(id, name, salary, department);
         this.teamSize = teamSize;
     }
 
-    // Function overriding (polymorphism)
+    // Run-time Polymorphism
+
     @Override
-    public void displayDetails(String type) {
-        super.displayDetails(type);
-        System.out.println("Team Size: " + teamSize);
+    public void displayDetails() {
+        super.displayDetails();
+        System.out.println("Team Size: " + this.teamSize);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Team Size=" + teamSize + "}";
     }
 }
+

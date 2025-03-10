@@ -1,42 +1,37 @@
 package task6.EmployeeManagement;
 
 public class Employee {
-    private int id;
-    private String name;
-    private String department;
-    private final int salary;
+    int id;
+    String name;
+    private double salary;
+    String department;
 
-    // Constructor
-    Employee(int id, String name, String department, int salary) {
+    public Employee(int id, String name, double salary, String department) {
         this.id = id;
         this.name = name;
-        this.department = department;
         this.salary = salary;
+        this.department = department;
     }
 
-    // Getter Methods
-    public int getId() {
-        return id;
+    public void displayDetails() {
+        System.out.println("Employee Details:");
+        System.out.println("ID: " + this.id);
+        System.out.println("Name: " + this.name);
+        System.out.println("Department: " + this.department);
+        System.out.println("Salary: $" + this.salary);
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String toString() {
+        return "Employee{ID=" + id + ", Name=" + name + ", Department=" + department + ", Salary=$" + salary + "}";
     }
 
-    public String getDepartment() {
-        return department;
-    }
-
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    // Display employee details
-    public void displayDetails(String type) {
-        System.out.println(type + " Details:");
-        System.out.println("ID: " + id);
-        System.out.println("Name: " + name);
-        System.out.println("Department: " + department);
-        System.out.println("Salary: $" + salary);
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 }
+
