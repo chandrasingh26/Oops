@@ -1,0 +1,21 @@
+Exception Handling
+
+Exception handling in Java is an effective mechanism for managing runtime errors to ensure
+the application’s regular flow is maintained.
+
+        Throwable (Superclass)
+            Exception (Recoverable errors)
+                Checked Exceptions (Compile-time)
+                IOException
+                SQLException
+                ClassNotFoundException
+
+            Unchecked Exceptions (RuntimeException)
+                NullPointerException
+                ArrayIndexOutOfBoundsException
+                ArithmeticException
+
+            Error (Non-recoverable)
+                StackOverflowError
+                OutOfMemoryError
+                VirtualMachineError
