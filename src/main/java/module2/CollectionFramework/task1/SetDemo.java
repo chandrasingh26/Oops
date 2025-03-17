@@ -9,7 +9,7 @@ public class SetDemo {
 
     public static void main(String[] args) {
 
-        Set<Integer> set = new HashSet<>();
+        Set<Integer> set = new HashSet<>();       // store element in random order
         set.add(23);
         set.add(23);
         set.add(21);
@@ -25,7 +25,7 @@ public class SetDemo {
         }
 
         set.remove(5);
-        set.removeIf(x -> x%3 == 0);
+        set.removeIf(x -> x%3 == 0);        // condition based removing
 
         System.out.println(set);
 

@@ -65,7 +65,49 @@
             -> Not Thread-Safe – Use Collections.synchronizedSortedSet() for synchronization.
             -> No null Allowed – Throws NullPointerException if null is inserted.
 
-        
+
+    3. Maps- ( key - value pair,  )
+
+         -> unique key
+         -> one value per key
+
+         a) HashMap- ( unordered, multiple value can be null, fast operations O(1) read-write both )
+
+         b) LinkedHashMap- ( ordered, faster operation )
+
+            -> LinkedHashMap(initial capacity, load factor, accessOrder )
+               -> AccessOrder - the ordering mode - i> true for access order (if accessed put in end of ll)
+                                                    ii> false for insertion order (stored in insertion order)
+
+
+
+         c) Sorted Map- (interface that extends Map)
+
+            i> TreeMap- (sorted key-value pair, slow operation)
+
+                -> does not allow null keys
+                -> T.C - O(log n)
+                -> implemented using RB tree
+
+            ii> NavigableMap- ( extends SortedMap )
+
+                -> support some more functionality like sorting in descending order.
+
+
+         d) HashTable- (synchronized, not null)
+
+            -> slower than hashMap
+
+         e) ConcurrentHashMap- (synchronized, fast O(1), null key or values not allowed, unordered)
+
+         f) ConcurrentSkipListMap- (ordered, uses Skip list, faster than TreeMap )
+
+         EnumMap- (used when the keys are present as EnumValues )
+
+         -> Keys must be enum.
+         -> keys are not null
+         -> Faster than HashMap
+         -> Maintain Natural order of sorting.
 
 
 
