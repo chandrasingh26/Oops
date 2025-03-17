@@ -1,0 +1,15 @@
+
+    Enumeration =>
+        a special data type that consists of a set of named constants, also known as enum values.
+
+    Ex- collection of days ( i.e. days of week )
+
+        public enum Day {
+            SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+        }
+
+    SOME IMPORTANT POINTS:-
+        1. Enum constants are constant and should be written in uppercase letters.
+        2. Enums can be used in switch statements.
+        3. Enums can implement interfaces.
+        4. Enums can't be used to create objects.

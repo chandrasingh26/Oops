@@ -14,17 +14,17 @@ public class Employee {
     }
 
     public void displayDetails() {
-        System.out.println("Employee Details:");
+       // System.out.println("Employee Details:");
         System.out.println("ID: " + this.id);
         System.out.println("Name: " + this.name);
         System.out.println("Department: " + this.department);
         System.out.println("Salary: $" + this.salary);
     }
 
-    @Override
-    public String toString() {
-        return "Employee{ID=" + id + ", Name=" + name + ", Department=" + department + ", Salary=$" + salary + "}";
-    }
+//    @Override
+//    public String toString() {
+//        return "Employee{ID=" + id + ", Name=" + name + ", Department=" + department + ", Salary=$" + salary + "}";
+//    }
 
     public double getSalary() {
         return salary;

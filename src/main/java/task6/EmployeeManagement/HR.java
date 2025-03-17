@@ -13,13 +13,13 @@ public class HR extends Employee {
 
     @Override
     public void displayDetails() {
-        super.displayDetails();
+//        super.displayDetails();
         System.out.println("Recruitments Handled: " + this.recruitmentsHandled);
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + ", Recruitments Handled=" + recruitmentsHandled + "}";
-    }
+//    @Override
+//    public String toString() {
+//        return super.toString() + ", Recruitments Handled=" + recruitmentsHandled + "}";
+//    }
 }
 

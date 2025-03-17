@@ -1,0 +1,73 @@
+//  Collection in Java-
+        It is a framework that provides an architecture to store and manipulate the group of objects.
+
+//  Collection Framework- (java.util package)
+        Represents a unified architecture for storing and manipulating group of objects.
+
+    Hierarchy of Collection Framework-
+
+                                             Iterable
+                                                |
+                                            Collection
+                                                |
+            -------------------------------------------------------------------------
+            |                                   |                                   |
+          List                                 Set                                Queue
+
+    1. List- (duplicate elements, null values, index-based operation)
+
+        a) ArrayList- (fast access, modify slow)
+
+           -> It is dynamic array
+           -> Can contain duplicate elements
+           -> Maintains insertion order
+           arraylist.add() -> for addition of new value
+           arraylist.get() -> for getting existing value
+
+        b) LinkedList- (slow access, modify fast)
+
+            -> Can contain duplicate elements
+            -> Maintain insertion order
+            -> can be used as list, stack and queue ( doubly ll )
+            -> can implement stack using ll because stack implements linked list.
+
+        c) Vector- ( same as like ArrayList )
+
+            -> unlike ArrayList, it has capacity checking method ( v.capacity() )
+            -> Synchronized (thread-safe)
+            -> in vector capacity increases in multiple of 2x by default
+            -> we can customize it according to need
+
+        d) Stack- (LIFO, synchronized)
+
+            -> thread safe ( extends Vector )
+            -> also can be implemented using linked list ( JCF ll is doubly ll )
+
+        e) CopyOnWriteArrayList- ( Read and Modify at same time )
+
+            -> Thread-Safe – Allows concurrent read operations without locks.
+            -> Copy-on-Write Mechanism – Creates a new copy of the list for write operations (add, set, remove).
+            -> Good for Read-Heavy Operations – Ideal when reads are frequent and writes are rare.
+
+
+    2. Set- (unique elements, modification fast )
+
+        a) HashSet- ( stored in unsorted manner, uses Hashing, Fast ( O(1) ) )
+
+            -> Unordered – Does not maintain insertion order.
+            -> Allows null Value – But only one null entry is allowed.
+            -> Not Thread-Safe – Must be synchronized externally if used in multithreaded environments.
+            -> Fast Operations (O(1) for add/remove/contains) – Efficient for searching elements.
+            -> No Indexing – Elements cannot be accessed by an index like in ArrayList.
+
+        b) TreeSet- ( stored in sorted manner, uses Red-Black Tree, Slow ( O(log n) ) )
+
+            -> Not Thread-Safe – Use Collections.synchronizedSortedSet() for synchronization.
+            -> No null Allowed – Throws NullPointerException if null is inserted.
+
+        
+
+
+
+
+
