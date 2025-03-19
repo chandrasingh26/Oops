@@ -1,0 +1,56 @@
+MULTI-THREADING =>
+    Multithreading allows multiple threads to run concurrently, improving performance and CPU utilization.
+
+    process - consists of multiple lightweight units called threads.
+
+    Thread - the smallest units of execution in a program.
+
+    Ways to create Thread -
+    a) Extend thread class
+
+        class MyThread extends Thread {
+            public void run() {
+            System.out.println("Thread Running");
+            }
+        }
+        new MyThread().start();
+
+    b) Implement runnable
+
+        class MyRunnable implements Runnable {
+            public void run() {
+            System.out.println("Thread Running");
+            }
+        }
+        new Thread(new MyRunnable()).start();
+
+    Some important thread methods-
+
+       -> start() → Starts thread execution.
+       -> sleep(ms) → Pauses thread for given time.
+       -> join() → Waits for a thread to complete.
+       -> yield() → Allows other threads to execute.
+       -> setPriority(n) → Sets thread priority (1 to 10).
+
+    Thread Synchronization - it is a mechanism that ensures that only one thread can access a resource at any given time.
+
+    Ways to achieve Thread Synchronization -
+
+        i> Synchronized Method (Locks entire method) -
+           public synchronized void increment() { count++; }
+
+        ii> Synchronized Block (Locks only a specific block of code) -
+            public void increment() {
+                synchronized (this) { count++; }
+            }
+
+        iii> ReentrantLock (More flexible locking mechanism) -
+             Lock lock = new ReentrantLock();
+             lock.lock();
+             try { count++; } finally { lock.unlock(); }
+
+
+
+
+
+
